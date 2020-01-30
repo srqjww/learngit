@@ -1,0 +1,52 @@
+ git config --global user.name "srqjww"
+$ git config --global user.email "rqqs@163.com"
+$ mkdir learngit
+$ cd learngit
+$ pwd
+通过git init命令把这个目录变成Git可以管理的仓库
+.git目录，默认是隐藏的，用ls -ah命令就可以看见。
+记得把Notepad++的默认编码设置为UTF-8 without BOM即可：
+编写一个readme.txt文件，可以在目录中用notepad++写，
+也可以 vi 文件名，点击i 即可编辑，点击ESC可显示命令行，输入:wq 回车后即可保存并
+
+退出
+git add 文件名
+git commit -m "wrote a readme file"
+
+$ git log 显示结束后，点击Q或CTRL+C可退出。用于显示repository 上的各个版本（可以
+
+查看提交历史)
+git log --pretty=oneline  #在一行中显示
+git status 显示工作区、测试区、repository 之间的文件关系
+$ git reset --hard HEAD^ #回到之前的那个版本
+$ git reset --hard 1094a #回到指定的那个版本
+git reflog用来记录你的每一次命令：
+
+$ cat readme.txt #cat用于查看文件的内容
+$ git diff HEAD -- readme.txt # 查看文件在工作区与repository 中的区别
+git checkout -- file #可以丢弃工作区的修改：命令中的--很重要，没有--，就变成了“
+
+切换到另一个分支”的命令
+git reset HEAD <file>可以把暂存区的修改撤销掉（unstage），重新放回工作区：
+
+版本库中删除该文件，那就用命令git rm删掉，并且git commit：
+
+$ ssh-keygen -t rsa -C "youremail@example.com"
+在 github.com 上加入SSH, 并建一个新的repository
+$ git remote add origin git@github.com:srqjww/learngit.git
+$ git push origin master
+
+$ git clone git@github.com:srqjww/learngit.git
+
+$ git config --global alias.clo 'clone git@github.com:srqjww/learngit.git'
+
+创建并切换到新的dev分支，可以使用：$ git switch -c dev
+$ git branch # 查看分支
+把dev分支的工作成果合并到master分支上：$ git merge dev #其中dev是分支名
+
+用带参数的git log也可以看到分支的合并情况：
+$ git log --graph --pretty=oneline --abbrev-commit
+
+$ git remote #我认为一定要进入之前init的库后才能运行本命令
+
+一个新PC， 安装git, 建一个目录（最好与要同步的同名） ，cd, git init, git remote add orgin git@github.com:srqjww/learngit.git , git pull origin master #如第二次操作则 origin master可省掉
